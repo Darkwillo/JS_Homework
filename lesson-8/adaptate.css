@@ -1,0 +1,115 @@
+@media only all and (max-width: 600px ) {
+    .width-limit {
+    min-width: 483px;
+    }
+    .package {
+        min-width: 483px;
+    }
+    .content__left {
+        display: none;
+    }
+    .content {
+        display: block;
+    }
+    .navigation__body {
+        display: none;
+    }
+    .wrapper {
+		display: block;
+	}
+	body.lock {
+		overflow: hidden;
+	}
+	.burger__body {
+		height: 50px;
+	}
+	.burger__cross {
+		display: block;
+		position: relative;
+		top: 15px;
+        left: 67px;
+		width: 30px;
+		height: 20px;
+		z-index: 4;
+	}
+	.burger__cross span {
+		position: absolute;
+		background-color: white;
+		left: 0px;
+		width: 100%;
+		height: 2px;
+		top: 9px;
+	}
+	.burger__cross:before,
+	.burger__cross:after {
+		content: "";
+		background-color: white;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+	}
+	.burger__cross:before {
+		top: 0px;
+	}
+	.burger__cross:after {
+		bottom: 0px;
+	}
+	.burger__cross.active:before {
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+		top: 9px;
+	}
+	.burger__cross.active:after {
+		-webkit-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		bottom: 9px;
+	}
+	.burger__cross.active span {
+		-webkit-transform: scale(0);
+		-ms-transform: scale(0);
+		transform: scale(0);
+	}
+	.burger__menu {
+            overflow: hidden;
+            position: fixed;
+            top: -1002px;
+            left: 10px;
+            background-color: #646d81;
+            border-radius: 10px;
+            transition: all 0.7s ease-in-out;
+	}
+	.navigation__link {
+		margin-right: 0px;
+	}
+	.burger__menu.active {
+		height: 360px;
+		top: 45px;
+	}
+	.burger__list {
+		padding: 60px 40px 0px;
+		display: block;
+	}
+	.burger__list li {
+		margin-top: 35px;
+	}
+    .header__profile {
+        padding-right: 10px;
+        margin-left: 60px;
+    }
+    .header__location {
+        display: none;
+    }
+    .header__body {
+        justify-content: center;
+    }
+
+
+}
+@media only all and (max-width: 750px) {
+    .content__settings {
+        display: none;
+}
+}
