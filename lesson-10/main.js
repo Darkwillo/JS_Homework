@@ -10,26 +10,26 @@ filterNumbersArr([-1, 0, 2, 34, -2, 5, 6, -13]);
 // Задание 2 
 function filterNumbersArr(numbers) {
 
-    var newArr = numbers.filter(function (el) {
+    var newArr = numbers.find(function (el) {
         return el > 0;
-    })[0];
+    });
     return newArr;
 }
 filterNumbersArr([-1, 0, -2, -34, -2, 5, 6, -13]);
 // Задание 3
-function Palindroms(word) {
-    return word == word.split('').reverse().join('');
+function palindroms(word) {
+    return word.toLowerCase() == word.toLowerCase().split('').reverse().join('');
 }
-Palindroms('шалаш');
+palindroms('ШАЛАШ');
 //Задание 4
-function Anagrams(word, word1) {
-    var anagram = word.split('').sort().join('');
-    var anagram1 = word1.split('').sort().join('');
-    if (anagram == anagram1) {
+function anagrams(word, word1) {
+    word = word.toLowerCase().split('').sort().join('');
+    word1 = word1.toLowerCase().split('').sort().join('');
+    if (word === word1) {
         return true;
     } return false;
 }
-Anagrams('салат', 'атлас');
+anagrams('салат', 'атлас');
 // Задание 5
 function divideArr(numbers, divide) {
     var newArr = [];
