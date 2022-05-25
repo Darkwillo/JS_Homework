@@ -23,10 +23,21 @@ function vowelsFilter(word) {
     for (var x = 0; x < word.length; x++) {
         if (vowelsLeter.indexOf(word[x]) == -1) {
             continue
-        }else {
-        count += 1;
+        } else {
+            count += 1;
         }
     }
     return count;
 }
 vowelsFilter('Написать функцию, которая будет принимать текст в качестве параметра');
+// Задание 4 
+function lengthСalculation(text) {
+    var textSplit = text.split(/[\!\?\.]+/);
+    for (var i = 0; i < textSplit.length; i++) {
+        if (!textSplit[i]) {
+            break;
+        }
+        console.log(textSplit[i] + ' : Letters quantity is : ' + textSplit[i].split(/[\,\ ]+/).join('').length);
+    }
+}
+lengthСalculation('Привет, студент! Студент... Как дела, студент?');
