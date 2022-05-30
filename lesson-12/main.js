@@ -17,13 +17,12 @@ function childSearch() {
         firstLinks.classList.add('childSearcher')
     }
 }
-for (var i = 0; ; i++) {
-var secondParagraph = secondPar.children[i];
-secondParagraph.onclick = secondLinks;
-}
 
-function secondLinks() {
+secondPar.onclick = function () {
+    var target = event.target;
+    if (target.tagName = 'HREF') {
         event.preventDefault()
         alert(event.target);
     }
+}
 
