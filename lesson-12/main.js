@@ -20,7 +20,7 @@ function childSearch() {
 
 secondPar.onclick = function () {
     var target = event.target;
-    if (target.tagName = 'HREF') {
+    if (target.tagName = 'A') {
         event.preventDefault()
         alert(event.target);
     }
