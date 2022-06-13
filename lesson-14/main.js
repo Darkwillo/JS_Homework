@@ -42,8 +42,10 @@ clonedObj.array.push(2);
 
 console.log(clonedObj);
 console.log(initialObj);
+
 // Задание 2 
 function compareFunc(obj1, obj2) {
+
     if (obj1 === null || obj2 === null) return 1
     var objKeys1 = Object.keys(obj1)
     var objKeys2 = Object.keys(obj2)
@@ -54,14 +56,16 @@ function compareFunc(obj1, obj2) {
         return false
     }
     for (var i = 0; i < objKeys1.length; i++) {
-        if (typeof obj1[objKeys1[i]] === 'object' && typeof obj2[objKeys2[i]] === 'object') {
+        if (toString(obj1.method) == toString(obj2.method)) {
+            return true;
+        } if (typeof obj1[objKeys1[i]] === 'object' && typeof obj2[objKeys2[i]] === 'object') {
             if (compareFunc(obj1[objKeys1[i]], obj2[objKeys2[i]])) {
                 continue
             } return false
-            }if (obj1[objKeys1[i]] !== obj2[objKeys2[i]]) {
-                return false
-            }
+        } if (obj1[objKeys1[i]] !== obj2[objKeys2[i]]) {
+            return false
         }
-        return true
     }
-    compareFunc(initialObj, clonedObj);
+    return true
+}
+compareFunc(initialObj, clonedObj);
